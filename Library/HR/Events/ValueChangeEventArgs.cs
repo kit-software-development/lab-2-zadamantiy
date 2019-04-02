@@ -14,7 +14,7 @@ namespace Practice.HR.Events
         /// <summary>
         ///     Старое значение свойства, которое изменилось.
         /// </summary>
-        public T OldValue { get; }
+        public T OldValue { get; private set; }
 
         /// <summary>
         ///     Базовый конструктор. Принимает старое значение свойства.
