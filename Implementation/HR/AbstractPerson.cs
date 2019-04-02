@@ -1,33 +1,37 @@
-﻿using System;
-using Practice.Common;
-using Practice.HR.Events;
-
-namespace Practice.HR
+﻿namespace Practice.HR
 {
     /// <summary>
     ///     Абстрактная база для описания конкретных реализаций типа "Человек".
     ///     Используется для дальнейшего наследования.
     /// </summary>
-    internal abstract class AbstractPerson : IPerson
+    internal abstract class AbstractPerson
     {
-        private IName _name;
-
-        public IName Name
+        internal Organization.Department Department
         {
-            get { return _name; }
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
             set
             {
-                var oldName = _name;
-                _name = value;
-                if (NameChange != null) 
-                {
-                    NameChange.Invoke(this, new ValueChangeEventArgs<IName>(oldName));
-                }
+                throw new System.NotImplementedException();
             }
         }
 
-        public event EventHandler<ValueChangeEventArgs<IName>> NameChange;
+        internal Common.Name Name
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
 
+            set
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+        
         /*
          * TODO #3: Реализуйте интерфейс IPerson для класса AbstractPerson
          */
